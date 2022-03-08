@@ -114,18 +114,19 @@ module Stable = struct
       [@@@ocaml.warning "-3"]
 
       type t = Caml.Gc.control =
-        { mutable minor_heap_size : int
-        ; mutable major_heap_increment : int
-        ; mutable space_overhead : int
-        ; mutable verbose : int
-        ; mutable max_overhead : int
-        ; mutable stack_limit : int
-        ; mutable allocation_policy : int
-        ; window_size : int
-        ; custom_major_ratio : int
-        ; custom_minor_ratio : int
-        ; custom_minor_max_size : int
-        }
+      {
+        minor_heap_size : int;
+        major_heap_increment : int;
+        space_overhead : int;
+        verbose : int;
+        max_overhead : int;
+        stack_limit : int;
+        allocation_policy : int;
+        window_size : int;
+        custom_major_ratio : int;
+        custom_minor_ratio : int;
+        custom_minor_max_size : int;
+      }
       [@@deriving bin_io, compare, equal, sexp]
     end
   end
@@ -240,18 +241,19 @@ module Control = struct
     [@@@ocaml.warning "-3"]
 
     type t = Caml.Gc.control =
-      { mutable minor_heap_size : int
-      ; mutable major_heap_increment : int
-      ; mutable space_overhead : int
-      ; mutable verbose : int
-      ; mutable max_overhead : int
-      ; mutable stack_limit : int
-      ; mutable allocation_policy : int
-      ; window_size : int
-      ; custom_major_ratio : int
-      ; custom_minor_ratio : int
-      ; custom_minor_max_size : int
-      }
+    {
+      minor_heap_size : int;
+      major_heap_increment : int;
+      space_overhead : int;
+      verbose : int;
+      max_overhead : int;
+      stack_limit : int;
+      allocation_policy : int;
+      window_size : int;
+      custom_major_ratio : int;
+      custom_minor_ratio : int;
+      custom_minor_max_size : int;
+    }
     [@@deriving compare, sexp_of, fields]
   end
 

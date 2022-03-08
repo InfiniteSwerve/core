@@ -1,4 +1,5 @@
 include Caml
+include Stdlib
 
 (* At Jane Street, the OCaml stdlib is patched to define [Pervasives.raise] as the
    ["%reraise"] primitive. We do this as the compiler is currently not good enough at
