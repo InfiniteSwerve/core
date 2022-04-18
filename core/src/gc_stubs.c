@@ -77,5 +77,5 @@ CAMLprim value core_gc_allocated_words(value unit __attribute__((unused)))
 
 CAMLprim value core_gc_run_memprof_callbacks(value unit __attribute__((unused)))
 {
-  Val_long(0);
+  return Val_long(0);
 }
